@@ -1,0 +1,612 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\components\\property\\add-property\\add-property.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\components\\property\\add-property\\add-property.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\components\\property\\add-property\\add-property.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\components\\property\\add-property\\add-property.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\components\\property\\view-property-details\\view-property-details.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\components\\property\\view-property-details\\view-property-details.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\components\\property\\view-property-details\\view-property-details.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\components\\property\\view-property-details\\view-property-details.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\common\\comment.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\common\\comment.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Angular Training\\Angular Assignment 2024\\RentHub\\src\\app\\components\\property\\view-property-details\\view-property-details.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\services\\housing.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\services\\housing.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\common\\article.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\common\\article.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\components\\property\\property-card\\property-card.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\components\\property\\property-card\\property-card.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\components\\property\\property-listing\\property-listing.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\components\\property\\property-listing\\property-listing.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\app.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\app-routing.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\app-routing.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\app.module.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\components\\property\\property-listing\\property-listing.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\components\\property\\property-listing\\property-listing.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\components\\pipes\\sort.pipe.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\components\\pipes\\sort.pipe.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\components\\pipes\\filter.pipe.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\components\\pipes\\filter.pipe.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\components\\pipes\\filter.pipe.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\components\\pipes\\filter.pipe.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\common\\iuser.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\common\\iuser.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\common\\ipropertybase.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\common\\ipropertybase.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\common\\iproperty.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\common\\iproperty.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Angular Training\\Angular Assignment 2024\\RentHub\\src\\app\\components\\property\\add-property\\add-property.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\components\\property\\property-card\\property-card.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\components\\property\\property-card\\property-card.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\components\\top-nav\\top-nav.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\components\\top-nav\\top-nav.component.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\services\\user.service.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\services\\user.service.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\services\\auth.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\services\\auth.service.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\common\\property.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\common\\property.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\assets\\data\\properties.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\assets\\data\\properties.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\services\\housing.service.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\services\\housing.service.spec.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\main.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\main.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\app\\components\\property\\featured-listing-carousel\\featured-listing-carousel.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\app\\components\\property\\featured-listing-carousel\\featured-listing-carousel.component.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|d:\\angular training\\angular assignment 2024\\scribble\\src\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{BD2904D0-17AA-447E-A6DB-4A1E22E6709D}|Scribble.esproj|solutionrelative:src\\styles.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 643,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "property-card.component.html",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\property\\property-card\\property-card.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\property\\property-card\\property-card.component.html",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\property\\property-card\\property-card.component.html",
+              "RelativeToolTip": "src\\app\\components\\property\\property-card\\property-card.component.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-09-02T16:42:06.486Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "view-property-details.component.html",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\property\\view-property-details\\view-property-details.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\property\\view-property-details\\view-property-details.component.html",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\property\\view-property-details\\view-property-details.component.html",
+              "RelativeToolTip": "src\\app\\components\\property\\view-property-details\\view-property-details.component.html",
+              "ViewState": "AQIAACIAAAAAAAAAAAAYwC4AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-09-02T16:39:46.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "view-property-details.component.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\property\\view-property-details\\view-property-details.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\property\\view-property-details\\view-property-details.component.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\property\\view-property-details\\view-property-details.component.ts",
+              "RelativeToolTip": "src\\app\\components\\property\\view-property-details\\view-property-details.component.ts",
+              "ViewState": "AQIAACgAAAAAAAAAAAAwwDgAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-03T02:51:08.275Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "article.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\common\\article.ts",
+              "RelativeDocumentMoniker": "src\\app\\common\\article.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\common\\article.ts",
+              "RelativeToolTip": "src\\app\\common\\article.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-03T02:08:41.639Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "add-property.component.html",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\property\\add-property\\add-property.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\property\\add-property\\add-property.component.html",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\property\\add-property\\add-property.component.html",
+              "RelativeToolTip": "src\\app\\components\\property\\add-property\\add-property.component.html",
+              "ViewState": "AQIAABIAAAAAAAAAAAAYwBYAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-08-26T13:58:26.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "add-property.component.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\property\\add-property\\add-property.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\property\\add-property\\add-property.component.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\property\\add-property\\add-property.component.ts*",
+              "RelativeToolTip": "src\\app\\components\\property\\add-property\\add-property.component.ts*",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAwJMAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-08-27T04:46:26.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "housing.service.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\services\\housing.service.ts",
+              "RelativeDocumentMoniker": "src\\app\\services\\housing.service.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\services\\housing.service.ts",
+              "RelativeToolTip": "src\\app\\services\\housing.service.ts",
+              "ViewState": "AQIAAJcAAAAAAAAAAAAAAKQAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-02T23:52:59.77Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "comment.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\common\\comment.ts",
+              "RelativeDocumentMoniker": "src\\app\\common\\comment.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\common\\comment.ts",
+              "RelativeToolTip": "src\\app\\common\\comment.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-05T00:50:37.835Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "view-property-details.component.html",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\RentHub\\src\\app\\components\\property\\view-property-details\\view-property-details.component.html",
+              "RelativeDocumentMoniker": "..\\RentHub\\src\\app\\components\\property\\view-property-details\\view-property-details.component.html",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\RentHub\\src\\app\\components\\property\\view-property-details\\view-property-details.component.html",
+              "RelativeToolTip": "..\\RentHub\\src\\app\\components\\property\\view-property-details\\view-property-details.component.html",
+              "ViewState": "AQIAAGwAAAAAAAAAAAAAAEYAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-09-05T01:31:33.047Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "property-listing.component.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\property\\property-listing\\property-listing.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\property\\property-listing\\property-listing.component.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\property\\property-listing\\property-listing.component.ts",
+              "RelativeToolTip": "src\\app\\components\\property\\property-listing\\property-listing.component.ts",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwA4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-03T03:04:35.913Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "app-routing.module.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\app-routing.module.ts",
+              "RelativeDocumentMoniker": "src\\app\\app-routing.module.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\app-routing.module.ts",
+              "RelativeToolTip": "src\\app\\app-routing.module.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-04T17:41:28.035Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "app.component.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\app.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\app.component.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\app.component.ts",
+              "RelativeToolTip": "src\\app\\app.component.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-04T17:41:45.915Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "app.module.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\app.module.ts",
+              "RelativeDocumentMoniker": "src\\app\\app.module.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\app.module.ts",
+              "RelativeToolTip": "src\\app\\app.module.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-08-26T14:54:45.179Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "property-listing.component.html",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\property\\property-listing\\property-listing.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\property\\property-listing\\property-listing.component.html",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\property\\property-listing\\property-listing.component.html",
+              "RelativeToolTip": "src\\app\\components\\property\\property-listing\\property-listing.component.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAGAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-09-02T16:40:24.373Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "filter.pipe.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\pipes\\filter.pipe.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\pipes\\filter.pipe.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\pipes\\filter.pipe.ts",
+              "RelativeToolTip": "src\\app\\components\\pipes\\filter.pipe.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-04T09:09:55.838Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "filter.pipe.spec.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\pipes\\filter.pipe.spec.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\pipes\\filter.pipe.spec.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\pipes\\filter.pipe.spec.ts",
+              "RelativeToolTip": "src\\app\\components\\pipes\\filter.pipe.spec.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-04T09:10:40.604Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "sort.pipe.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\pipes\\sort.pipe.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\pipes\\sort.pipe.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\pipes\\sort.pipe.ts",
+              "RelativeToolTip": "src\\app\\components\\pipes\\sort.pipe.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-04T09:10:49.952Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "IProperty.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\common\\IProperty.ts",
+              "RelativeDocumentMoniker": "src\\app\\common\\IProperty.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\common\\IProperty.ts",
+              "RelativeToolTip": "src\\app\\common\\IProperty.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-02T20:54:41.224Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "IPropertyBase.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\common\\IPropertyBase.ts",
+              "RelativeDocumentMoniker": "src\\app\\common\\IPropertyBase.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\common\\IPropertyBase.ts",
+              "RelativeToolTip": "src\\app\\common\\IPropertyBase.ts",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwBcAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-02T20:54:45.617Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "IUser.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\common\\IUser.ts",
+              "RelativeDocumentMoniker": "src\\app\\common\\IUser.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\common\\IUser.ts",
+              "RelativeToolTip": "src\\app\\common\\IUser.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-03T02:26:53.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "add-property.component.html",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\RentHub\\src\\app\\components\\property\\add-property\\add-property.component.html",
+              "RelativeDocumentMoniker": "..\\RentHub\\src\\app\\components\\property\\add-property\\add-property.component.html",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\RentHub\\src\\app\\components\\property\\add-property\\add-property.component.html",
+              "RelativeToolTip": "..\\RentHub\\src\\app\\components\\property\\add-property\\add-property.component.html",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAG4AAAAoAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-09-03T02:14:29.642Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "property-card.component.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\property\\property-card\\property-card.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\property\\property-card\\property-card.component.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\property\\property-card\\property-card.component.ts",
+              "RelativeToolTip": "src\\app\\components\\property\\property-card\\property-card.component.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-02T23:29:48.953Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "user.service.spec.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\services\\user.service.spec.ts",
+              "RelativeDocumentMoniker": "src\\app\\services\\user.service.spec.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\services\\user.service.spec.ts",
+              "RelativeToolTip": "src\\app\\services\\user.service.spec.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-03T02:28:40.361Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "top-nav.component.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\top-nav\\top-nav.component.ts",
+              "RelativeDocumentMoniker": "src\\app\\components\\top-nav\\top-nav.component.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\top-nav\\top-nav.component.ts",
+              "RelativeToolTip": "src\\app\\components\\top-nav\\top-nav.component.ts",
+              "ViewState": "AQIAABYAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-03T02:28:52.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "auth.service.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\services\\auth.service.ts",
+              "RelativeDocumentMoniker": "src\\app\\services\\auth.service.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\services\\auth.service.ts",
+              "RelativeToolTip": "src\\app\\services\\auth.service.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-03T02:27:31.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "property.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\common\\property.ts",
+              "RelativeDocumentMoniker": "src\\app\\common\\property.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\common\\property.ts",
+              "RelativeToolTip": "src\\app\\common\\property.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-03T02:27:00.12Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "properties.json",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\assets\\data\\properties.json",
+              "RelativeDocumentMoniker": "src\\assets\\data\\properties.json",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\assets\\data\\properties.json",
+              "RelativeToolTip": "src\\assets\\data\\properties.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-09-02T20:41:19.367Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "housing.service.spec.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\services\\housing.service.spec.ts",
+              "RelativeDocumentMoniker": "src\\app\\services\\housing.service.spec.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\services\\housing.service.spec.ts",
+              "RelativeToolTip": "src\\app\\services\\housing.service.spec.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-02T23:53:01.39Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "main.ts",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\main.ts",
+              "RelativeDocumentMoniker": "src\\main.ts",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\main.ts",
+              "RelativeToolTip": "src\\main.ts",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAABhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2024-09-02T18:05:22.355Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "styles.css",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\styles.css",
+              "RelativeDocumentMoniker": "src\\styles.css",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\styles.css",
+              "RelativeToolTip": "src\\styles.css",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-09-02T16:35:04.405Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "featured-listing-carousel.component.html",
+              "DocumentMoniker": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\property\\featured-listing-carousel\\featured-listing-carousel.component.html",
+              "RelativeDocumentMoniker": "src\\app\\components\\property\\featured-listing-carousel\\featured-listing-carousel.component.html",
+              "ToolTip": "D:\\Angular Training\\Angular Assignment 2024\\Scribble\\src\\app\\components\\property\\featured-listing-carousel\\featured-listing-carousel.component.html",
+              "RelativeToolTip": "src\\app\\components\\property\\featured-listing-carousel\\featured-listing-carousel.component.html",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAABNAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2024-08-26T12:33:05.116Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 251,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 401,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:3:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{d212f56b-c48a-434c-a121-1c5d80b59b9f}"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 350,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:2:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8034f19-ab72-4f06-83fd-f6832b41aa63}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

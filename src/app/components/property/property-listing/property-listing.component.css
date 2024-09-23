@@ -1,0 +1,73 @@
+.card-main-style {
+  border-radius: 100px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+}
+
+.card-filter {
+  background-color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+}
+
+.card-title-filter {
+  font-weight: 500;
+}
+
+.btn {
+  font-size: 14px;
+}
+
+.btn-primary {
+  border-color: blue;
+  background-color: blue;
+}
+
+.btn-secondary {
+  background-color: blue;
+  border-color: blue;
+}
+
+.btn-success {
+  background-color: darkred;
+  border-color: darkred;
+}
+
+.form-control {
+  border-radius: 4px;
+}
+
+.form-control-sm {
+  font-size: 0.875rem;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.mr-2 {
+  margin-right: 0.5rem;
+}
+
+.ml-2 {
+  margin-left: 0.5rem;
+}
+
+.mb-0 {
+  margin-bottom: 0;
+}
+
+.shadow-lg {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.rounded {
+  border-radius: 8px;
+}

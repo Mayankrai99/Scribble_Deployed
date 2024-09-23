@@ -1,0 +1,30 @@
+<div class="card main-card-wrapper">
+  <div class="img-wrapper">
+    
+    <img
+      
+      class="houseImg card-img-top"
+      src="assets/images/house.jpg"
+    />
+    <ul
+      *ngIf="!hideIcons"
+      class="list-inline text-center button-container btn-animate"
+    >
+      <li class="list-inline-item">
+        <button
+          class="btn btn-primary"
+          routerLink="/view-property-detail/{{ article?.id }}"
+        >
+          <i class="fa-regular fa-eye">View details</i>
+        </button>
+      </li>
+      
+    </ul>
+  </div>
+  <div class="card-body p-1">
+    <h1 class="mb-0">
+      <span style="font-weight: normal;">{{ article?.name }}</span>
+    </h1>
+    
+  </div>
+</div>

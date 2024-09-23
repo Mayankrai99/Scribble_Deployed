@@ -1,0 +1,41 @@
+.photo-control {
+  min-width: 300px;
+  vertical-align: middle;
+  text-align: center;
+  border: 1px dashed gray;
+  margin: 5px;
+}
+
+.card-header {
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.head-heading {
+  background: #0026ff;
+  color: lightcyan;
+}
+
+.form-label {
+  font-weight: bold;
+  color: black;
+}
+
+.btn-primary {
+  border-color: blue;
+  background-color: blue;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: darkblue;
+  border-color: darkblue;
+}
+
+.preview-heading {
+  color: black;
+  font-weight: 500;
+  font-size: 18px;
+}

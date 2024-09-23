@@ -1,0 +1,21 @@
+.card {
+  min-height: 600px;
+}
+
+.card img {
+  padding: 15px;
+}
+
+.card-body h1 {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.btn-primary {
+  border-color: lightcoral;
+  background-color: lightcoral;
+}
+
+.commentimage {
+  height: 30px;
+  width: 30px;
+}

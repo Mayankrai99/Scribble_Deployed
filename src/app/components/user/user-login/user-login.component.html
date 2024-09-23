@@ -1,0 +1,45 @@
+<div class="row">
+  <div class="col-5 m-auto">
+    <div class="card m-auto shadow-lg border-0">
+      <div class="card-header head-heading text-center">Login</div>
+      <div class="card-body">
+        <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)">
+          <div class="form-group col-12">
+            <label class="form-label"> Name </label>
+            <input class="form-control" required ngModel name="userName" />
+          </div>
+          <br /><br />
+
+          <div class="form-group col-12">
+            <label class="form-label">Password</label>
+            <input
+              class="form-control"
+              required
+              type="password"
+              ngModel
+              name="password"
+            />
+          </div>
+          <br /><br />
+
+          <div class="form-group col-12 text-center">
+            <button
+              [disabled]="!loginForm.valid"
+              type="submit"
+              class="btn btn-primary me-2"
+            >
+              Login
+            </button>
+            <button type="button" class="btn btn-secondary ml-2">Cancel</button>
+          </div>
+          <br />
+          <div class="col-12 text-center form-label">
+            Don't have an account?
+            <a href="/user/register" class="link-style">Sign up</a>
+          </div>
+          
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
