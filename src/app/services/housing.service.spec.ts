@@ -1,11 +1,12 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
 import { HousingService } from './housing.service';
 import { IPropertyBase } from '../common/IPropertyBase';
 import { Article } from '../common/article';
 import { IArticleBase } from '../common/IPropertyBase';
 import { comment } from '../common/comment';
 import { of } from 'rxjs';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('HousingService', () => {
   let service: HousingService;
@@ -13,9 +14,9 @@ describe('HousingService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      providers: [HousingService]
-    });
+    imports: [],
+    providers: [HousingService, provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+});
     service = TestBed.inject(HousingService);
     httpMock = TestBed.inject(HttpTestingController);
     // Clear localStorage before each test

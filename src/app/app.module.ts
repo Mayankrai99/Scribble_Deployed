@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopNavComponent } from './components/top-nav/top-nav.component';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { HousingService } from './services/housing.service';
 import { UserService } from './services/user.service';
 import { AuthService } from './services/auth.service';
@@ -18,28 +18,18 @@ import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@s
 import { NgIf } from '@angular/common';
 //import {AngularEditorModule} from '@kolkov/angular-editor';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    TopNavComponent,
-    
-    
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    NgIf,
-    BsDropdownModule.forRoot(),
-    BrowserAnimationsModule,
-    AlertModule.forRoot(),
-    ModalModule.forRoot(),
-    TabsModule.forRoot(),
-    ButtonsModule.forRoot(),
-    BsDatepickerModule.forRoot(),
-    //AngularEditorModule
-  ],
-  providers: [HousingService, UserService, AuthService, ToolbarService, LinkService, ImageService, HtmlEditorService],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        TopNavComponent,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        NgIf,
+        BsDropdownModule.forRoot(),
+        BrowserAnimationsModule,
+        AlertModule.forRoot(),
+        ModalModule.forRoot(),
+        TabsModule.forRoot(),
+        ButtonsModule.forRoot(),
+        BsDatepickerModule.forRoot()], providers: [HousingService, UserService, AuthService, ToolbarService, LinkService, ImageService, HtmlEditorService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
