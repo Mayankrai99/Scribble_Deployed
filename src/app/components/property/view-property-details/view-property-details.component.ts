@@ -2,9 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HousingService } from '../../../services/housing.service';
 import { Property } from '../../../common/property';
-import { IPropertyBase, IArticleBase } from '../../../common/IPropertyBase';
+import { IArticleBase } from '../../../common/IPropertyBase';
 import { Article, Comment, Reply } from '../../../common/article';
-import { TopNavComponent } from '../../top-nav/top-nav.component';
 import { AuthService } from '../../../services/auth.service';
 
 @Component({

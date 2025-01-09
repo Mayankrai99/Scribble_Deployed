@@ -16,33 +16,6 @@ export class AuthService {
   loggedInUserId: number | null = null;
   constructor() {}
 
-  
-
-  /* attachSignin(element: any) {
-    const auth2 = gapi.auth2.getAuthInstance();
-    auth2.attachClickHandler(element, {},
-      (googleUser: any) => {
-        const profile = googleUser.getBasicProfile();
-        const id_token = googleUser.getAuthResponse().id_token;
-        console.log('Google User signed in:', profile.getName(), profile.getEmail());
-        
-        // Store Google token in localStorage
-        localStorage.setItem('googleToken', id_token);
-      },
-      (error: any) => {
-        console.error(JSON.stringify(error, undefined, 2));
-      }
-    );
-  }
-
-  googleSignOut() {
-    const auth2 = gapi.auth2.getAuthInstance();
-    if (auth2) {
-      auth2.signOut().then(() => {
-        console.log('User signed out from Google.');
-      });
-    }
-  } */
 
   authUser(user: User): User | undefined {
     const users = localStorage.getItem('Users');

@@ -16,7 +16,7 @@ export class PropertyListingComponent implements OnInit {
   name = '';
   SearchCity = '';
   SearchName = '';
-  private isBrowser: boolean;
+  public isBrowser: boolean;
   SortbyParam = '';
   SortDirection = 'asc';
 
@@ -28,16 +28,25 @@ export class PropertyListingComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.housingService.getAllArticles().subscribe(
-      (response: IArticleBase[]) => {
+    // this.housingService.getAllArticles().subscribe(
+    //   (response: IArticleBase[]) => {
+    //     this.Articles = response;
+    //   },
+    //   (error) => console.log(error)
+    // );
+
+    this.housingService.getAllArticles().subscribe({
+      next: (response: IArticleBase[]) => {
         this.Articles = response;
       },
-      (error) => console.log(error)
-    );
+      error: (error) => console.log(error),
+      complete: () => console.log('Articles fetched successfully.'),
+    });
   }
 
   onCityFilter() {
-    this.SearchCity = this.name;
+    console.log("your name: ",this.name);
+    this.SearchCity = this.name.trim();
   }
 
   onCityFilterReset() {
@@ -48,5 +57,6 @@ export class PropertyListingComponent implements OnInit {
 
   onSortDirection() {
     this.SortDirection = this.SortDirection === 'desc' ? 'asc' : 'desc';
+    
   }
 }

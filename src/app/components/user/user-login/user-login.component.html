@@ -3,10 +3,16 @@
     <div class="card m-auto shadow-lg border-0">
       <div class="card-header head-heading text-center">Login</div>
       <div class="card-body">
-        <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm)">
+        <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
           <div class="form-group col-12">
-            <label class="form-label"> Name </label>
-            <input class="form-control" required ngModel name="userName" />
+            <label class="form-label"> Username </label>
+            <input type="text" class="form-control" formControlName="userName" />
+            <span class="error-block text-danger"
+                  *ngIf="!userName?.valid && (userName?.touched || userName?.dirty || formSubmitted)">
+                  <span class="error-block text-danger"
+                  *ngIf="userName?.errors?.['minlength'] || userName?.errors?.['pattern'] || userName?.errors?.['whitespace'] || userName?.errors?.['required']">Please enter a valid username with at least 3 characters</span>
+            </span>
+            
           </div>
           <br /><br />
 
@@ -16,15 +22,19 @@
               class="form-control"
               required
               type="password"
-              ngModel
-              name="password"
+              formControlName="password"
             />
+            <span class="error-block text-danger"
+                  *ngIf="!password?.valid && (password?.touched || password?.dirty || formSubmitted)">
+                  <span class="error-block text-danger"
+                  *ngIf="password?.errors?.['minlength'] || password?.errors?.['pattern'] || password?.errors?.['whitespace'] || password?.errors?.['required']">Please enter a valid password with at least 8 characters</span>
+            </span>
           </div>
           <br /><br />
 
           <div class="form-group col-12 text-center">
             <button
-              [disabled]="!loginForm.valid"
+              [disabled]="loginForm.invalid"
               type="submit"
               class="btn btn-primary me-2"
             >

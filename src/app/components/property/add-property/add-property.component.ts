@@ -1,14 +1,13 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { NgForm, FormBuilder, FormControl, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ToolbarService, LinkService, ImageService, HtmlEditorService, RichTextEditorComponent, RichTextEditorModule, QuickToolbarService, PasteCleanupService, VideoService, AudioService, TableService } from '@syncfusion/ej2-angular-richtexteditor';
+import { ToolbarService, LinkService, ImageService, HtmlEditorService, RichTextEditorComponent, QuickToolbarService, PasteCleanupService, VideoService, AudioService, TableService } from '@syncfusion/ej2-angular-richtexteditor';
 import { TabsetComponent } from 'ngx-bootstrap/tabs';
-import { IArticle, IProperty } from '../../../common/IProperty';
+import { IArticle } from '../../../common/IProperty';
 import { Property } from '../../../common/property';
 import { Article } from '../../../common/article';
 import { HousingService } from '../../../services/housing.service';
-import { NgIf } from '@angular/common';
-import {AngularEditorConfig} from '@kolkov/angular-editor';
+
 
 @Component({
   selector: 'app-add-property',
@@ -23,7 +22,7 @@ export class AddPropertyComponent implements OnInit {
   @ViewChild('formTabs') formTabs!: TabsetComponent;
   rteForm!: FormGroup;
 
-  private rteEle!: RichTextEditorComponent;
+  //private rteEle!: RichTextEditorComponent;
 
   article = new Article();
 
@@ -77,13 +76,30 @@ export class AddPropertyComponent implements OnInit {
   ngOnInit() {
     
     this.rteForm = this.fb.group({
-      articlename: ['', Validators.required],  // Article name field
-      htmlContent: ['', Validators.required]   // Rich text editor content field
+      articlename: ['', [Validators.required, this.noWhitespaceValidator]],  // Article name field
+      htmlContent: ['', [Validators.required, this.sanitizeRichTextContent]]   // Rich text editor content field
     });
   }
 
   onBack() {
     this.router.navigate(['/']);
+  }
+
+  noWhitespaceValidator(control: FormControl) {
+    const value = control.value || '';
+    const isValid = value.trim().length > 0; // Check if there's at least one non-whitespace character
+    return isValid ? null : { invalidWhitespace: true }; // Return custom error if invalid
+  }
+
+  sanitizeRichTextContent(control: FormControl): { [key: string]: boolean } | null {
+    const value = control.value || '';
+    // Remove all HTML tags and decode entities
+    const sanitizedContent = value.replace(/<[^>]*>/g, '').trim();
+    return sanitizedContent.length > 0 ? null : { whitespace: true };
+  }
+
+  get inputField() {
+    return this.rteForm.get('inputField');
   }
 
   onSubmit() {

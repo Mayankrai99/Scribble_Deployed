@@ -13,8 +13,14 @@
                   <label class="form-label" for="type">Name</label>
                   <input type="text" class="form-control" formControlName="articlename" />
                   <!-- Validation error message for name -->
-                  <div *ngIf="rteForm.get('articlename')?.invalid && rteForm.get('articlename')?.touched">
-                    <p class="text-danger">Name is required.</p>
+                  <div>
+                    <!-- <p class="text-danger">Name is required.</p> -->
+                    <span class="error-block text-danger"
+                      *ngIf="rteForm.get('articlename')?.invalid && (rteForm.get('articlename')?.touched || rteForm.get('articlename')?.dirty)">
+                      <span class="error-block text-danger" *ngIf="rteForm.get('articlename')?.errors?.['invalidWhitespace']">
+                        Enter a valid article name.
+                      </span>
+                    </span>
                   </div>
                 </div>
                 <br /><br />
@@ -23,13 +29,22 @@
                   <label class="form-label" for="type">Article</label>
                   <angular-editor formControlName="htmlContent" [config]="articlePreview.description"></angular-editor>
                   <!-- Validation error message for rich text editor content -->
-                  <div *ngIf="rteForm.get('htmlContent')?.invalid && rteForm.get('htmlContent')?.touched">
-                    <p class="text-danger">Article content is required.</p>
+                  <div>
+                    <span class="text-danger"
+                    *ngIf="rteForm.get('htmlContent')?.invalid && (rteForm.get('htmlContent')?.touched || rteForm.get('htmlContent')?.dirty)">
+                    <span class="error-block text-danger"
+                      *ngIf="rteForm.get('htmlContent')?.errors?.['whitespace']">
+                      Please enter a valid article.
+                    </span>
+            
+                    </span>
                   </div>
                 </div>
                 <div class="form-group">
-                  <button type="submit">Submit</button>
-                  <button type="reset" (click)="onReset()" style="margin-left: 20px">Reset</button>
+                  <button type="submit" class="btn btn-primary me-2" 
+                          [disabled]="rteForm.invalid">Submit</button>
+                  <button type="reset" (click)="onReset()" style="margin-left: 20px"
+                          class="btn btn-primary ml-2">Reset</button>
                 </div>
               </form>
 

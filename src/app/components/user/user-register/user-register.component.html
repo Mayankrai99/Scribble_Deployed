@@ -9,12 +9,18 @@
       <div class="card-body">
         <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
           <div class="form-group col-12">
-            <label for="name" class="form-label">Name</label>
+            <label for="name" class="form-label">Username</label>
             <input type="text"
                    class="form-control"
                    formControlName="userName" />
             <span class="error-block text-danger"
-                  *ngIf="!userName?.valid && (userName?.touched || formSubmitted)">Please provide name</span>
+                  *ngIf="!userName?.valid && (userName?.touched || userName?.dirty || formSubmitted)">
+              
+              <span class="error-block text-danger"
+                  *ngIf="userName?.errors?.['minlength'] || userName?.errors?.['pattern'] || userName?.errors?.['whitespace'] || userName?.errors?.['required']">Please enter a valid username with at least 3 characters</span>
+            </span>
+            
+            
           </div>
           <br /><br />
           <div class="form-group col-12">
@@ -29,6 +35,7 @@
                 Please provide a valid email
               </span>
             </span>
+            
           </div>
           <br /><br />
           <div class="form-group col-12">
@@ -37,13 +44,11 @@
                    class="form-control"
                    formControlName="password" />
             <span class="error-block text-danger"
-                  *ngIf="!password?.valid && (password?.touched || formSubmitted)">
-              <span *ngIf="password?.hasError('required')">
-                Please provide password
+                  *ngIf="!password?.valid && (password?.touched || password?.dirty || formSubmitted)">
+              <span *ngIf="password?.hasError('required') || password?.hasError('minlength') || password?.errors?.['whitespace']">
+                Please provide a valid password with at least 8 characters
               </span>
-              <span *ngIf="password?.hasError('minlength')">
-                Password must be at least 8 characters long
-              </span>
+              
             </span>
           </div>
           <br /><br />
@@ -69,12 +74,13 @@
           </div>
           <br /><br />
           <div class="form-group col-12 text-center">
-            <button type="submit" class="btn btn-primary me-2">Save</button>
+            <button type="submit" class="btn btn-primary me-2"
+                    [disabled]="registrationForm.invalid">Save</button>
             <button type="reset" class="btn btn-secondary ml-2">Cancel</button>
           </div>
           <br />
           <div class="col-12 text-center form-label">
-            Already have an account?
+            Already have an account/Want social login?
             <a href="/user/login" class="link-style">Log In</a>
           </div>
         </form>

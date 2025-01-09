@@ -39,13 +39,30 @@ export class UserRegisterComponent implements OnInit {
     this.registrationForm = this.fb.group(
       {
         id: [null], // Add id to the form
-        userName: [null, Validators.required],
+        userName: [null, [Validators.required, Validators.minLength(3), Validators.pattern('[a-zA-Z ]*'), this.validateAndTrim.bind(this),]],
         email: [null, [Validators.required, Validators.email]],
-        password: [null, [Validators.required, Validators.minLength(8)]],
+        password: [null, [Validators.required, Validators.minLength(8), this.validateAndTrim.bind(this)]],
         confirmPassword: [null, Validators.required],
       },
-      { validators: this.passwordMatchingValidator }
+      { validators: this.passwordMatchingValidator },
     );
+  }
+
+  validateAndTrim(control: AbstractControl): ValidationErrors | null {
+    const value = control.value || ''; // Handle null or undefined values
+    const trimmedValue = value.trim();
+
+    // If the trimmed value is empty, return a whitespace error
+    if (trimmedValue.length === 0) {
+      return { whitespace: true };
+    }
+
+    // Trim the value directly in the control (optional, can do separately on submit)
+    if (value !== trimmedValue) {
+      control.setValue(trimmedValue, { emitEvent: false }); // Avoid triggering valueChanges unnecessarily
+    }
+
+    return null; // Input is valid
   }
 
   passwordMatchingValidator(control: AbstractControl): ValidationErrors | null {
@@ -82,12 +99,18 @@ export class UserRegisterComponent implements OnInit {
   onSubmit() {
     this.formSubmitted = true;
     if (this.registrationForm.valid) {
+      const trimmedUserName = this.userName?.value.trim();
+      this.registrationForm.patchValue({ userName: trimmedUserName });
       this.userService.addUsers(this.userData());
       this.registrationForm.reset();
       this.formSubmitted = false;
+      //alert('Registration successful');
       this.router.navigate(['/user/login']);
     } else {
       //alertify.error('error message');
+      console.error('error message');
+      alert('Inorrect credentials');
+      
     }
   }
 }

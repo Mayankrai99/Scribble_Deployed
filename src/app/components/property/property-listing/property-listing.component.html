@@ -1,12 +1,13 @@
 <div class="corusel-container">
-  <app-featured-listing-carousel></app-featured-listing-carousel>
+  <!-- <app-featured-listing-carousel></app-featured-listing-carousel> -->
 </div>
 <div class="container mt-5 p-0">
   <div class="card-filter p-4 shadow-lg rounded">
     <div class="card-body">
-      <h4 class="card-title-filter mb-4">Filter and Sort</h4>
+      <app-featured-listing-carousel></app-featured-listing-carousel>
+      <!-- <h4 class="card-title-filter mb-4">Filter and Sort</h4> -->
       <div class="d-flex justify-content-between">
-        <div class="w-80 d-flex align-items-center">
+        <!-- <div class="w-80 d-flex align-items-center">
           <div class="d-flex align-items-center mr-3">
             <label for="cityInput" class="mr-2 mb-0">Filter Article:</label>
             <input
@@ -27,11 +28,12 @@
               class="btn btn-secondary btn-sm ml-2"
               (click)="onCityFilterReset()"
             >
-              <i class="fa-solid fa-filter"></i>
+              
+               Reset
             </button>
           </div>
-        </div>
-        <div class="w-50 d-flex align-items-center">
+        </div> -->
+        <!-- <div class="w-50 d-flex align-items-center">
           <div class="d-flex align-items-center mr-3">
             <label for="sortSelect" class="mr-2 mb-0">Sort by</label>
             <select
@@ -50,7 +52,7 @@
               Sort
             </button>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -58,10 +60,7 @@
 <div class="row">
   <div
     *ngFor="
-      let article of Articles
-        | filter : SearchName : 'name'
-        | sort : [SortbyParam, SortDirection]
-    "
+      let article of Articles | filter: SearchCity : 'name'"
     class="card-main-style col-sm-3"
   >
     <app-property-card [article]="article"></app-property-card>
