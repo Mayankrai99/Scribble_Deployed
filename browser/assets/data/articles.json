@@ -1,0 +1,107 @@
+[
+  {
+    "article_id": 1,
+    "name": "Introduction to Angular",
+    "description": "An overview of Angular framework and its core features.",
+    "comments": [
+      {
+        "comment_id": 1,
+        "user_id": "1",
+        "username": "MK",
+        "text": "Great introduction!",
+        "replies": [
+          {
+            "reply_id": 1,
+            "user_id": "1",
+            "username": "MK",
+            "text": "Thanks!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "article_id": 2,
+    "name": "Getting Started with TypeScript",
+    "description": "A beginner's guide to TypeScript, its syntax, and type system.",
+    "comments": [
+      {
+        "comment_id": 1,
+        "user_id": "b72f",
+        "username": "JaneDoe",
+        "text": "Very informative. Helped me get started!",
+        "replies": [
+          {
+            "reply_id": 1,
+            "user_id": "c83g",
+            "username": "JohnSmith",
+            "text": "Totally agree!"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "article_id": 3,
+    "name": "Advanced Angular Techniques",
+    "description": "Exploring advanced features like dependency injection and services in Angular.",
+    "comments": [
+      {
+        "comment_id": 1,
+        "user_id": "d94h",
+        "username": "Alice",
+        "text": "Great article for advanced learners!",
+        "replies": [
+          {
+            "reply_id": 1,
+            "user_id": "e15i",
+            "username": "Bob",
+            "text": "Loved the section on dependency injection."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "article_id": 4,
+    "name": "Reactive Forms in Angular",
+    "description": "Learn how to build and validate forms using Angular's reactive forms.",
+    "comments": [
+      {
+        "comment_id": 1,
+        "user_id": "f26j",
+        "username": "Chris",
+        "text": "I struggled with forms until I read this!",
+        "replies": [
+          {
+            "reply_id": 1,
+            "user_id": "g37k",
+            "username": "Dana",
+            "text": "Same here! This is a must-read."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "article_id": 5,
+    "name": "Routing in Angular",
+    "description": "Mastering Angular routing and navigation.",
+    "comments": [
+      {
+        "comment_id": 1,
+        "user_id": "h48l",
+        "username": "Eva",
+        "text": "This clarified so many doubts I had about routing!",
+        "replies": [
+          {
+            "reply_id": 1,
+            "user_id": "i59m",
+            "username": "Frank",
+            "text": "Great explanation, especially the part on lazy loading."
+          }
+        ]
+      }
+    ]
+  }
+]
