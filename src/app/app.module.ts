@@ -16,6 +16,7 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 import { NgIf } from '@angular/common';
+import { SocialLoginModule, SocialAuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from '@abacritt/angularx-social-login';
 //import {AngularEditorModule} from '@kolkov/angular-editor';
 
 @NgModule({ declarations: [
@@ -27,9 +28,33 @@ import { NgIf } from '@angular/common';
         NgIf,
         BsDropdownModule.forRoot(),
         BrowserAnimationsModule,
+        SocialLoginModule,
         AlertModule.forRoot(),
         ModalModule.forRoot(),
         TabsModule.forRoot(),
         ButtonsModule.forRoot(),
-        BsDatepickerModule.forRoot()], providers: [HousingService, UserService, AuthService, ToolbarService, LinkService, ImageService, HtmlEditorService, provideHttpClient(withInterceptorsFromDi())] })
+        BsDatepickerModule.forRoot()], providers: [
+            {
+                provide: 'SocialAuthServiceConfig',
+                useValue: {
+                  autoLogin: false,
+                  lang: 'en',
+                  providers: [
+                    {
+                      id: GoogleLoginProvider.PROVIDER_ID,
+                      provider: new GoogleLoginProvider(
+                        'clientId'
+                      )
+                    },
+                    {
+                      id: FacebookLoginProvider.PROVIDER_ID,
+                      provider: new FacebookLoginProvider('948006640801219')
+                    }
+                  ],
+                  onError: (err) => {
+                    console.error(err);
+                  }
+                } as SocialAuthServiceConfig,
+              },
+            HousingService, UserService, AuthService, ToolbarService, LinkService, ImageService, HtmlEditorService, provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}

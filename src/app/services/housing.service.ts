@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map, Observable, of } from 'rxjs';
+import { BehaviorSubject, map, Observable, of } from 'rxjs';
 import { IArticleBase, IPropertyBase } from '../common/IPropertyBase';
 import { Property } from '../common/property';
 import { Article } from '../common/article';
@@ -13,6 +13,13 @@ export class HousingService {
 
   private comments: comment[] = [];
   constructor(private http: HttpClient) {}
+
+  private searchTerm = new BehaviorSubject<string>('');
+  searchTerm$ = this.searchTerm.asObservable();
+
+  setSearchTerm(term: string): void {
+    this.searchTerm.next(term);
+  }
 
   getAllProperties(): Observable<IPropertyBase[]> {
     return this.http.get<IPropertyBase[]>('assets/data/properties.json').pipe(
@@ -185,4 +192,6 @@ export class HousingService {
     this.comments.push(comment);
     return of(comment);
   }
+
+  
 }

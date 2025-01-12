@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { isPlatformBrowser } from '@angular/common';
 
 
 interface User {
@@ -14,7 +13,9 @@ export class AuthService {
 
   loggedInUser: string | null = null;
   loggedInUserId: number | null = null;
-  constructor() {}
+  constructor() {
+    
+  }
 
 
   authUser(user: User): User | undefined {

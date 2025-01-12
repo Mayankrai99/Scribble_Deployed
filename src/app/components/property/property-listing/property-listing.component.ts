@@ -12,6 +12,7 @@ export class PropertyListingComponent implements OnInit {
   [x: string]: any;
   Properties: IPropertyBase[] = []; // Initialize as an empty array
   Articles: IArticleBase[] = [];
+  filteredArticles: IArticleBase[] = [];
   city = '';
   name = '';
   SearchCity = '';
@@ -19,6 +20,9 @@ export class PropertyListingComponent implements OnInit {
   public isBrowser: boolean;
   SortbyParam = '';
   SortDirection = 'asc';
+  searchTest: string = '';
+  searchTerm: string = '';
+  articleCount: any;
 
   constructor(
     private housingService: HousingService,
@@ -28,35 +32,55 @@ export class PropertyListingComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.housingService.getAllArticles().subscribe(
-    //   (response: IArticleBase[]) => {
-    //     this.Articles = response;
-    //   },
-    //   (error) => console.log(error)
-    // );
+    
+    this.getArticles();    
+  }
 
+  getArticles():void {
+    console.log('',)
     this.housingService.getAllArticles().subscribe({
       next: (response: IArticleBase[]) => {
+        //this.filteredArticles = response;
         this.Articles = response;
+        this.applyFilter();
+        
       },
-      error: (error) => console.log(error),
+      error: (error) => console.log('error in search term subscription',error),
       complete: () => console.log('Articles fetched successfully.'),
     });
   }
 
-  onCityFilter() {
-    console.log("your name: ",this.name);
-    this.SearchCity = this.name.trim();
+  applyFilter(): void {
+    console.log('apply filter is called', this.searchTest)
+
+    this.searchTest = this.searchTerm.trim();
+
+    if (this.searchTest.trim().length>0) {
+      this.filteredArticles = this.Articles.filter((item) =>
+        //item.name.toLowerCase()===this.searchTest.toLowerCase()
+        item.name.toLowerCase().includes(this.searchTest.toLowerCase())
+
+      );
+    } else {
+      this.filteredArticles = this.Articles; // No filter, show all items
+    }
+
+    this.articleCount=this.filteredArticles.length;
   }
 
-  onCityFilterReset() {
-    this.name = '';
-    this.SearchCity = '';
-    this.SearchName = '';
-  }
+  // onCityFilter() {
+  //   console.log("your name: ",this.name);
+  //   this.SearchCity = this.name.trim();
+  // }
 
-  onSortDirection() {
-    this.SortDirection = this.SortDirection === 'desc' ? 'asc' : 'desc';
+  // onCityFilterReset() {
+  //   this.name = '';
+  //   this.SearchCity = '';
+  //   this.SearchName = '';
+  // }
+
+  // onSortDirection() {
+  //   this.SortDirection = this.SortDirection === 'desc' ? 'asc' : 'desc';
     
-  }
+  // }
 }

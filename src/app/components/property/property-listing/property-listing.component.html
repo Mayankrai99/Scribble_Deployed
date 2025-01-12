@@ -1,11 +1,26 @@
 <div class="corusel-container">
-  <!-- <app-featured-listing-carousel></app-featured-listing-carousel> -->
 </div>
 <div class="container mt-5 p-0">
   <div class="card-filter p-4 shadow-lg rounded">
     <div class="card-body">
-      <app-featured-listing-carousel></app-featured-listing-carousel>
-      <!-- <h4 class="card-title-filter mb-4">Filter and Sort</h4> -->
+      <div>
+        <h1 id="heading" style="text-align:center; font-weight:bold">Discover your articles</h1>
+        
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <input
+            type="text"
+            height="10px"
+            [(ngModel)]="searchTerm"
+            placeholder="Enter some text"
+            style="padding: 10px; width: 300px; margin-right: 10px; height: 40px;" />
+          
+          <button (click)="getArticles()" class="btn btn-primary me-2" style="width: 100px;">Search</button>
+        </div>
+        
+          
+      </div>
+      
+      
       <div class="d-flex justify-content-between">
         <!-- <div class="w-80 d-flex align-items-center">
           <div class="d-flex align-items-center mr-3">
@@ -60,7 +75,7 @@
 <div class="row">
   <div
     *ngFor="
-      let article of Articles | filter: SearchCity : 'name'"
+      let article of filteredArticles"
     class="card-main-style col-sm-3"
   >
     <app-property-card [article]="article"></app-property-card>

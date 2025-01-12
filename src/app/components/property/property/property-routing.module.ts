@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: '', component: PropertyListingComponent },
   { path: 'add-property', component: AddPropertyComponent },
   { path: 'view-property-detail/:id', component: ViewPropertyDetailsComponent },
+  // { path: 'carousel', component: FeaturedListingCarouselComponent }, // Add the standalone component route
 ];
 
 @NgModule({

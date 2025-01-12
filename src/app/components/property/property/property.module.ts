@@ -8,7 +8,6 @@ import { RichTextEditorModule } from '@syncfusion/ej2-angular-richtexteditor';
 import { PropertyCardComponent } from '../property-card/property-card.component';
 import { FilterPipe } from '../../pipes/filter.pipe';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { FeaturedListingCarouselComponent } from '../featured-listing-carousel/featured-listing-carousel.component';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { RouterModule } from '@angular/router';
 import { TabsModule } from 'ngx-bootstrap/tabs';
@@ -21,6 +20,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     ViewPropertyDetailsComponent,
     PropertyCardComponent,
     FilterPipe,
+    
   ],
   imports: [
     CommonModule,
@@ -29,9 +29,8 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     RichTextEditorModule,
     ReactiveFormsModule,
     FormsModule,
-    FeaturedListingCarouselComponent,
     AngularEditorModule,
-    TabsModule
+    TabsModule,
   ]
 })
 export class PropertyModule { }
