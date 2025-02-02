@@ -1,6 +1,6 @@
 .main-card-wrapper {
   border-radius: 15px;
-  height: 400px; /* Set a fixed height for the card */
+  height: 300px; /* Set a fixed height for the card */
   display: flex;
   flex-direction: column;
   justify-content: space-between;

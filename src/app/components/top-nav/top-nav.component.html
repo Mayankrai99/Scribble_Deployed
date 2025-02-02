@@ -27,6 +27,12 @@
             routerLink="/add-property"
             >Create Article</a
           >
+
+          
+        </li>
+        <li>
+          <a *ngIf="loggedIn()" class="nav-link active" aria-current="page" [routerLinkActiveOptions]="{ exact: true }"
+            routerLinkActive="active" routerLink="/explore-author">Explore Authors</a>
         </li>
       </ul>
       <div>

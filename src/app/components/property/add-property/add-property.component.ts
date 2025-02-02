@@ -7,6 +7,9 @@ import { IArticle } from '../../../common/IProperty';
 import { Property } from '../../../common/property';
 import { Article } from '../../../common/article';
 import { HousingService } from '../../../services/housing.service';
+import { AuthService } from '../../../services/auth.service';
+import { Observable } from 'rxjs';
+import { HttpEvent, HttpResponse } from '@angular/common/http';
 
 
 @Component({
@@ -67,11 +70,17 @@ export class AddPropertyComponent implements OnInit {
         tag: 'h1',
       },
     ],
-    uploadUrl: 'v1/image',
+    sanitize: true,
+    //upload: (file: File) => this.convertToBase64(file),
     }
   };
 
-  constructor(private fb: FormBuilder, private router: Router, private housingService: HousingService) {}
+  loggedInUser: string | null = null;
+  loggedInUserId: any;
+
+  constructor(private fb: FormBuilder, private router: Router, private housingService: HousingService,
+    private authService: AuthService
+  ) {}
 
   ngOnInit() {
     
@@ -79,6 +88,10 @@ export class AddPropertyComponent implements OnInit {
       articlename: ['', [Validators.required, this.noWhitespaceValidator]],  // Article name field
       htmlContent: ['', [Validators.required, this.sanitizeRichTextContent]]   // Rich text editor content field
     });
+
+    this.loggedInUser = this.authService.getLoggedInUser();
+
+
   }
 
   onBack() {
@@ -102,7 +115,27 @@ export class AddPropertyComponent implements OnInit {
     return this.rteForm.get('inputField');
   }
 
+  getLoggedInUserId() {
+      
+      this.loggedInUser = localStorage.getItem('token');
+      const usersData = JSON.parse(localStorage.getItem('Users') || '[]');
+      const userSK = usersData.find((user: any) => user.userName === this.loggedInUser);
+      console.log(localStorage);
+      
+      if (userSK) {
+        console.log('User ID:', userSK.id);
+        return userSK.id;
+      } else {
+        console.log('User not found');
+        return null;
+      }
+      
+      
+    }
+
   onSubmit() {
+    //const articleAuthorId = this.getLoggedInUserId();
+    //const articleAuthorName = this.loggedInUser;
 
     this.mapProperty();
     this.housingService.addArticle(this.article);
@@ -122,12 +155,12 @@ export class AddPropertyComponent implements OnInit {
   mapProperty() {
     this.article.id = this.housingService.newArticleId();
     this.article.name = this.rteForm?.value.articlename || '';
+    this.article.authorId = this.authService.getLoggedInUserId();
+    this.article.author = this.loggedInUser;
     this.article.description = this.rteForm.get('htmlContent')?.value || '';
+    //this.article.description = `<style>img { max-width: 100%; height: auto; }</style>` + this.article.description;
+    this.article.dateOfPublish = new Date();
     this.article.comments = [];
-    
-  }
-
-  mapPropertyComments() {
     
   }
 
@@ -135,49 +168,33 @@ export class AddPropertyComponent implements OnInit {
     this.formTabs.tabs[tabId].active = true;
   }
 
-  /* validateAndNavigate(tabId: number) {
-    const currentTab = this.formTabs.tabs[tabId - 1];
-    const formGroup = this.addPropertyForm?.form.get(
-      currentTab?.id as string
-    ) as FormGroup;
+  convertToBase64(file: File): Observable<HttpEvent<any>> {
+    return new Observable((observer) => {
+      const reader = new FileReader();
+      reader.readAsDataURL(file);
 
-    if (formGroup) {
-      Object.keys(formGroup.controls).forEach((key) => {
-        const control = formGroup.controls[key];
-        if (control) {
-          control.markAsTouched();
+      reader.onload = () => {
+        const base64String = reader.result as string;
+
+        // Insert Base64 Image into the Editor Content
+        const currentContent = this.rteForm.get('htmlContent')?.value || '';
+        if(!currentContent.includes(base64String))
+        {
+          const newContent = `${currentContent}<img src="${base64String}" style="max-width: 100%; height: auto; width: 300px">`;
+          this.rteForm.get('htmlContent')?.setValue(newContent);
         }
-      });
+        
 
-      if (formGroup.valid) {
-        this.selectTab(tabId);
-      }
-    }
-  }
+        // Return a properly formatted HttpResponse
+        observer.next(new HttpResponse({ status: 200, body: { imageUrl: base64String } }));
+        observer.complete();
+      };
 
-  private markAllAsTouched() {
-    if (this.addPropertyForm) {
-      Object.keys(this.addPropertyForm.controls).forEach((key) => {
-        const control = this.addPropertyForm?.controls[key];
-        if (control) {
-          control.markAsTouched();
-          if (control instanceof FormGroup) {
-            this.markGroupAsTouched(control);
-          }
-        }
-      });
-    }
-  }
-
-  private markGroupAsTouched(group: FormGroup) {
-    Object.keys(group.controls).forEach((key) => {
-      const control = group.controls[key];
-      if (control) {
-        control.markAsTouched();
-        if (control instanceof FormGroup) {
-          this.markGroupAsTouched(control);
-        }
-      }
+      reader.onerror = (error) => {
+        observer.error(error);
+      };
     });
-  } */
+
+  }
+
 }

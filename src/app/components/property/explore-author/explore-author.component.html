@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="sidebar" style="background-color: black;">
+        <h1><strong>Authors</strong></h1>
+        <div class="list-group">
+            
+            <button type="button" class="list-group-item list-group-item-action"
+             *ngFor="let author of authorList" (click)="applyAuthorFilter(author.id)">{{author.userName}}</button>
+            
+        </div>
+
+    </div>
+    <div class="content">
+        <div class="biography">
+            <div class="picture">
+                <img class="profilepic" src="assets/images/user.jpg">
+            </div>
+            <div class="info">
+                <h1><strong>{{currentClickedUser}}</strong></h1>
+                <p><strong>Hi my name is {{currentClickedUser}}. I am a budding author passionate about writing new things to inspire people
+                    and make them aware of new facts or happenings that are going on in the outside world. I hope you'll
+                     enjoy my content.
+                </strong></p>
+            </div>
+            
+        </div>
+        <div>
+            <h3><strong>Articles by the author</strong></h3>
+        </div>
+        <div class="articlesofauthor">
+            
+            <div *ngFor="
+                  let article of filteredArticles" class="card-main-style col-sm-3"
+                  >
+                <app-property-card [article]="article"></app-property-card>
+            </div>
+            <div class="noArticleMessage" *ngIf="noArticles">
+                <p><strong>No articles by this author</strong></p>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>

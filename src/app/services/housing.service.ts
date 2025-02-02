@@ -17,6 +17,8 @@ export class HousingService {
   private searchTerm = new BehaviorSubject<string>('');
   searchTerm$ = this.searchTerm.asObservable();
 
+  //articles: any[] = [];
+
   setSearchTerm(term: string): void {
     this.searchTerm.next(term);
   }
@@ -61,6 +63,10 @@ export class HousingService {
     );
   }
 
+
+
+  //Get Article
+
   getAllArticles(): Observable<IArticleBase[]> {
     return this.http.get<IArticleBase[]>('assets/data/articles.json').pipe(
       map((res) => {
@@ -101,6 +107,7 @@ export class HousingService {
     );
   }
 
+  
   addProperty(property: Property) {
     let newProperty: Property[];
 
@@ -114,7 +121,19 @@ export class HousingService {
     localStorage.setItem('newProperty', JSON.stringify(newProperty));
   }
 
+
+
+  //Add Article
   addArticle(article: Article) {
+    article.htmlContent = (article.description as any).content || '';
+
+    article.htmlContent = article.htmlContent.replace(
+      /<img /g,
+      '<img style="max-width:100%; height:auto; display:block; margin:0 auto;" '
+    );
+
+    
+
     let newArticle: Article[];
 
     const existingArticles = localStorage.getItem('newArticle');
@@ -182,6 +201,13 @@ export class HousingService {
 
       localStorage.setItem('newArticle', JSON.stringify(localAddedArticles));
     }
+  }
+
+  saveArticles(articles: any[]) {
+    if (articles && articles.length > 0) {
+      localStorage.setItem('newArticle', JSON.stringify(articles));
+    }
+
   }
 
   getCommentsByArticleId(articleId: number): Observable<comment[]> {

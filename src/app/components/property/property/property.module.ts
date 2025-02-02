@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularEditorModule } from '@kolkov/angular-editor';
 import { RouterModule } from '@angular/router';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { ExploreAuthorComponent } from '../explore-author/explore-author.component';
 
 
 @NgModule({
@@ -19,8 +20,8 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
     PropertyListingComponent,
     ViewPropertyDetailsComponent,
     PropertyCardComponent,
+    ExploreAuthorComponent,
     FilterPipe,
-    
   ],
   imports: [
     CommonModule,

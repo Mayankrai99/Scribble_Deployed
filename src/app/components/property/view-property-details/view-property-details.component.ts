@@ -1,22 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef, ElementRef, AfterViewInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HousingService } from '../../../services/housing.service';
 import { Property } from '../../../common/property';
 import { IArticleBase } from '../../../common/IPropertyBase';
 import { Article, Comment, Reply } from '../../../common/article';
 import { AuthService } from '../../../services/auth.service';
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+import { SwiperOptions } from 'swiper/types';
+import { DatePipe } from '@angular/common';
 
 @Component({
   selector: 'app-view-property-details',
   templateUrl: './view-property-details.component.html',
   styleUrls: ['./view-property-details.component.css'],
 })
-export class ViewPropertyDetailsComponent implements OnInit {
+export class ViewPropertyDetailsComponent implements OnInit, AfterViewInit {
   public propertyId!: number;
   public articleId!: number;
 
   property = new Property();
   article = new Article();
+
+  articles: any[]=[];
+
+  authorIdForRelated = new Article();
+  relatedArticles: any[]=[];
   
   newCommentText: string = '';
   newReplyText: {[key:number]: string} = {};
@@ -24,17 +33,26 @@ export class ViewPropertyDetailsComponent implements OnInit {
   currentUserName: string | null = null;
   currentUserId: number | null = null;
 
+  commentText: { [key: number]: string } = {};
+  replyText: { [key: number]: string } = {};
+  showReplyForm: { [key: number]: boolean } = {};
+
   constructor(
     private route: ActivatedRoute,
     private housingService: HousingService,
-    private authServ: AuthService
+    private authServ: AuthService,
+    private cdRef: ChangeDetectorRef
   ) {}
 
   ngOnInit() {
     this.articleId = this.route.snapshot.params['id'];
+    
 
     this.currentUserName = this.authServ.getLoggedInUser();
     this.currentUserId = this.authServ.getLoggedInUserId();
+
+    this.loadallarticles();
+    //this.articles = this.housingService.getAllArticles();
 
     this.route.params.subscribe((params) => {
       this.articleId = +params['id'];
@@ -52,49 +70,104 @@ export class ViewPropertyDetailsComponent implements OnInit {
     });
   }
 
+  ngAfterViewInit() {
+    new Swiper('.mySwiper', {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      modules: [Pagination],
+    } as SwiperOptions);
+  }
+
+  loadallarticles() {
+    const storedData = localStorage.getItem('newArticle');
+    this.articles = storedData ? JSON.parse(storedData).filter((a: any) => a !== null) : [];
+
+    this.authorIdForRelated = this.articles.find((a)=> a.id == this.articleId);
+    
+    this.relatedArticles = this.articles.filter((i)=> i.name.toLowerCase().includes(this.authorIdForRelated.name) || i.authorId === this.authorIdForRelated.authorId);
+
+  }
+
+  // Toggle reply form visibility
+  toggleReplyForm(commentId: number) {
+    this.showReplyForm[commentId] = !this.showReplyForm[commentId];
+  }
+
 
   //Add comment
-  addComment() {
+  addComment(articleId: number) {
 
+    if (this.commentText[articleId]?.trim()) {
 
-    const newComment: Comment = {
-      comment_id: this.article.comments.length + 1,
-      user_id: this.currentUserId,
-      username: this.currentUserName,
-      text: this.newCommentText,
-      replies: []
-    };
+      const newComment: Comment = {
+        comment_id: this.article.comments.length + 1,
+        user_id: this.currentUserId,
+        username: this.currentUserName,
+        text: this.commentText[articleId],
+        replies: []
+      };
 
-    //pushing new comments to article array
-    this.article.comments.push(newComment);
-    //this.newCommentText = '';
+      const article = this.articles.find((a)=>a.id === articleId);
 
-    //updating article in local storage
-    this.housingService.updateArticles(this.articleId, this.article);
-    this.newCommentText = '';
+      if (article) {
+
+        //pushing new comments to article array
+        article.comments = article.comments || [];
+        article.comments.push(newComment);
+        this.saveArticles();
+        this.commentText[articleId] = '';
+
+        
+        this.cdRef.detectChanges();
+
+        //updating article in local storage
+        //this.housingService.updateArticles(this.articleId, this.article);
+        //this.newCommentText = '';
+      }
+    }
 
   }
 
   //add reply
-  addReply(commentId: number) {
-    const comment = this.article.comments.find(c => c.comment_id === commentId);
+  addReply(articleId: number, commentId: number) {
 
-
-    if(comment) {
+    if(this.replyText[commentId]?.trim()) {
       const newReply: Reply = {
-        reply_id: comment.replies.length+1,
+        reply_id: new Date().getTime(),
         user_id: this.currentUserId,
         username: this.currentUserName,
-        text: this.newReplyText[commentId]      
+        text: this.replyText[commentId]      
       };
 
-      //pushing new replies in article array
-      comment.replies.push(newReply);
-      this.newReplyText[commentId] = '';
 
-      //update the article in local storage
-      this.housingService.updateArticles(this.articleId, this.article);
+      const article = this.articles.find((a) => a.id === articleId);
+      if (article) {
+        const comment = article.comments.find((c: { comment_id: number; }) => c.comment_id === commentId);
+        if (comment) {
+          comment.replies = comment.replies || [];
+          comment.replies.push(newReply);
+          this.saveArticles();
+          this.replyText[commentId] = '';
+          this.showReplyForm[commentId] = false;
+          this.cdRef.detectChanges();
+        }
+
+      }
+
+      
     }
+    //const finalarticles = this.loadallarticles();
+  }
+
+  // Save articles back to local storage
+  saveArticles() {
+    if (this.articles && this.articles.length > 0) {
+      localStorage.setItem('newArticle', JSON.stringify(this.articles));
+    }    
   }
 
 }

@@ -3,6 +3,7 @@
     "article_id": 1,
     "name": "Introduction to Angular",
     "description": "An overview of Angular framework and its core features.",
+    "dateOfPublish": "2023-01-01T20:09:04.697Z",
     "comments": [
       {
         "comment_id": 1,
@@ -24,6 +25,7 @@
     "article_id": 2,
     "name": "Getting Started with TypeScript",
     "description": "A beginner's guide to TypeScript, its syntax, and type system.",
+    "dateOfPublish": "2023-01-02T20:09:04.697Z",
     "comments": [
       {
         "comment_id": 1,
@@ -45,6 +47,7 @@
     "article_id": 3,
     "name": "Advanced Angular Techniques",
     "description": "Exploring advanced features like dependency injection and services in Angular.",
+    "dateOfPublish": "2023-01-03T20:09:04.697Z",
     "comments": [
       {
         "comment_id": 1,
@@ -66,6 +69,7 @@
     "article_id": 4,
     "name": "Reactive Forms in Angular",
     "description": "Learn how to build and validate forms using Angular's reactive forms.",
+    "dateOfPublish": "2023-01-04T20:09:04.697Z",
     "comments": [
       {
         "comment_id": 1,
@@ -87,6 +91,7 @@
     "article_id": 5,
     "name": "Routing in Angular",
     "description": "Mastering Angular routing and navigation.",
+    "dateOfPublish": "2023-01-05T20:09:04.697Z",
     "comments": [
       {
         "comment_id": 1,

@@ -13,6 +13,7 @@ export class PropertyListingComponent implements OnInit {
   Properties: IPropertyBase[] = []; // Initialize as an empty array
   Articles: IArticleBase[] = [];
   filteredArticles: IArticleBase[] = [];
+  paginatedArticles: IArticleBase[] = [];
   city = '';
   name = '';
   SearchCity = '';
@@ -22,7 +23,11 @@ export class PropertyListingComponent implements OnInit {
   SortDirection = 'asc';
   searchTest: string = '';
   searchTerm: string = '';
-  articleCount: any;
+  //articleCount: any;
+  articleCount: number = 0;
+  itemsPerPage: number = 8;
+  currentPage: number = 1;
+  totalPages: number = 0;
 
   constructor(
     private housingService: HousingService,
@@ -65,22 +70,54 @@ export class PropertyListingComponent implements OnInit {
       this.filteredArticles = this.Articles; // No filter, show all items
     }
 
-    this.articleCount=this.filteredArticles.length;
+    /* this.articleCount = this.filteredArticles.length;
+    this.totalPages = Math.ceil(this.articleCount / this.itemsPerPage);
+    this.currentPage = 1; // Reset to first page when filtering
+    this.updateDisplayedArticles(); */
+    this.sortArticles();
   }
 
-  // onCityFilter() {
-  //   console.log("your name: ",this.name);
-  //   this.SearchCity = this.name.trim();
-  // }
+  sortArticles(): void {
+    this.filteredArticles.sort((a, b) => {
+      const dateA = a.dateOfPublish ? new Date(a.dateOfPublish).getTime() : 0;
+      const dateB = b.dateOfPublish ? new Date(b.dateOfPublish).getTime() : 0;
 
-  // onCityFilterReset() {
-  //   this.name = '';
-  //   this.SearchCity = '';
-  //   this.SearchName = '';
-  // }
+      if (this.SortbyParam === 'newest') {
+        return dateB - dateA; // Newest first
+      } else if (this.SortbyParam === 'oldest') {
+        return dateA - dateB; // Oldest first
+      }
+      return 0; // No sorting if no sorting parameter is set
+    });
 
-  // onSortDirection() {
-  //   this.SortDirection = this.SortDirection === 'desc' ? 'asc' : 'desc';
-    
-  // }
+    this.articleCount = this.filteredArticles.length;
+    this.totalPages = Math.ceil(this.articleCount / this.itemsPerPage);
+    this.currentPage = 1; // Reset to first page when filtering
+    this.updateDisplayedArticles();
+  }
+
+  updateDisplayedArticles(): void {
+    const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+    const endIndex = startIndex + this.itemsPerPage;
+    this.paginatedArticles = this.filteredArticles.slice(startIndex, endIndex);
+  }
+
+  changePage(page: number): void {
+    if (page >= 1 && page <= this.totalPages) {
+      this.currentPage = page;
+      this.updateDisplayedArticles();
+    }
+  }
+
+  resetFilters(): void {
+    this.searchTerm = '';
+    this.SortbyParam = '';
+    this.filteredArticles = [...this.Articles]; // Reset to original data
+    this.articleCount = this.filteredArticles.length;
+    this.totalPages = Math.ceil(this.articleCount / this.itemsPerPage);
+    this.currentPage = 1;
+    this.updateDisplayedArticles();
+
+  }
+
 }

@@ -1,3 +1,14 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ===== Link Swiper's CSS ===== -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- ===== Fontawesome CDN Link ===== -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <!-- ===== CSS ===== -->
+  <link rel="stylesheet" href="view-property-details.component.css" />
+</head>
+
 <div class="row shadow">
   <div class="col-sm-4 p-0">
     <div class="card">
@@ -11,6 +22,8 @@
       </div>
       <div class="card-body">
         <h1 class="card-title">{{ article.name }}</h1>
+        <p><strong>By: </strong>{{ article.author }}</p>
+        <p><strong>Date of publish: </strong>{{ article.dateOfPublish | date: 'dd MMM yyyy' }}</p>
       </div>
       <div class="card-footer">
         <div class="btn-group d-flex">
@@ -18,15 +31,58 @@
           <button class="btn btn-success">Comment</button>
         </div>
       </div>
+      <div class="col-sm-12 p-0 comment-section">
+        <h5 *ngIf="article.comments.length > 0"><strong>Comments</strong></h5>
+        <div class="comment-list">
+        <div *ngFor="let comment of article.comments" class="comment"> 
+          <div class="comment-right-part">
+            <div class="comment-content">
+              <img class="commentimage" src="assets/images/user.jpg" />
+              <div class="comment-author"><strong>{{ comment.username }}</strong></div>
+              
+            </div>
+            <div class="comment-text">{{ comment.text }}</div>
+            <div>
+              <a href="javascript:void(0)" (click)="toggleReplyForm(comment.comment_id)">Reply</a>
+      
+              <!-- Conditionally show reply form here-->
+      
+              <div *ngIf="showReplyForm[comment.comment_id]" class="reply-form">
+                <input type="text" [(ngModel)]="replyText[comment.comment_id]" placeholder="Write your reply...">
+                <button (click)="addReply(article.id, comment.comment_id)">Reply</button>
+              </div>
+              <div *ngIf="comment.replies.length > 0">
+      
+                <div *ngFor="let reply of comment.replies" class="reply mb-2 p-2 border-start">
+                  <div class="reply-image-container">
+                    <img class="replyimage" src="assets/images/user.jpg" />
+                    <div class="reply-author"><strong>{{ reply.username }}</strong></div>
+                  </div>
+                  <div class="reply-text">{{ reply.text }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+        <br>
+        
+      </div>
+      <div *ngIf="currentUserName!=null" class="col-sm-12 p-0">
+        <!-- <textarea class="form-control" placeholder="Add a comment" ></textarea> -->
+        <input type="text" placeholder="Add a comment..." [(ngModel)]="commentText[article.id]">
+        <button class="btn btn-primary mt-2" style="width: auto;" (click)="addComment(article.id)">Add
+          Comment</button>
+      </div>
     </div>
   </div>
   <div class="col-sm-8 p-0">
     <div class="tab-panel">
       <tabset class="member-tabset">
         <tab heading="Article">
-          <h1>{{article.name}}</h1>
-          <div class="col-sm-6 p-0">
-            <div [innerHTML]="article.description"></div>
+          <h1><strong>{{article.name}}</strong></h1>
+          <div class="col-sm-12 p-0">
+            <div class="scrollable-content" [innerHTML]="article.description"></div>
           </div>
         </tab>
       </tabset>
@@ -35,31 +91,17 @@
   </div>
 
   <!-- Comments Section -->
-  <div>
-    <h5>Comments</h5>
-    <div *ngFor="let comment of article.comments" class="comment">
-      <div class="comment-image-container">
-        <img class="commentimage" src="assets/images/user.jpg" />
-      </div>
-      <div class="comment-right-part">
-        <div class="comment-content">
-          <div class="comment-author">{{ comment.username }}</div>
-        </div>
-        <div class="comment-text">{{ comment.text }}</div>
-      </div>
-      <div *ngIf="comment.replies.length > 0">
-        <div class="reply-image-container">
-          <img class="replyimage" src="assets/images/user.jpg" />
-        </div>
-        <div *ngFor="let reply of comment.replies" class="reply mb-2 p-2 border-start">
-          <strong>{{ reply.username }}:</strong> {{ reply.text }}
+  <div class="swiper-container">
+    <h1><strong>Related Articles</strong></h1>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" *ngFor="let article of relatedArticles">
+          <app-property-card [article]="article"></app-property-card>
         </div>
       </div>
-    </div>
-    <br>
-    <div class="col-sm-4 p-0">
-      <textarea class="form-control" placeholder="Add a comment"></textarea>
-      <button class="btn btn-primary mt-2" (click)="addComment()">Add Comment</button>
+      <div class="swiper-pagination"></div>
     </div>
   </div>
+  
+  
 </div>

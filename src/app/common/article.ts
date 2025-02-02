@@ -18,7 +18,12 @@ export interface Comment {
 
 export class Article implements IArticleBase {
   id!: number;
+  author!: any;
+  authorId!: number;
   name!: string;
   description!: AngularEditorConfig;
+
+  htmlContent!: string;
+  dateOfPublish!: Date;
   comments!: Comment[];
 }

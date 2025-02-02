@@ -24,5 +24,10 @@ export interface IPropertyBase {
 export interface IArticleBase {
   id: number;
   name: string;
+
+  dateOfPublish?: Date;
+
+  authorId?: number | undefined;
+  author?: any;
   
 }

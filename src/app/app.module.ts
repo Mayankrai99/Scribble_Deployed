@@ -17,7 +17,7 @@ import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
 import { ToolbarService, LinkService, ImageService, HtmlEditorService } from '@syncfusion/ej2-angular-richtexteditor';
 import { NgIf } from '@angular/common';
 import { SocialLoginModule, SocialAuthServiceConfig, GoogleLoginProvider, FacebookLoginProvider } from '@abacritt/angularx-social-login';
-//import {AngularEditorModule} from '@kolkov/angular-editor';
+
 
 @NgModule({ declarations: [
         AppComponent,

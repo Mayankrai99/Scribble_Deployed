@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 
 
-interface User {
+export interface User {
+
+  id?: number;
   userName: string;
   password: string;
 }
