@@ -37,6 +37,8 @@ export class ViewPropertyDetailsComponent implements OnInit, AfterViewInit {
   replyText: { [key: number]: string } = {};
   showReplyForm: { [key: number]: boolean } = {};
 
+  showReplyReplyForm: { [key: number]: boolean } = {};
+
   constructor(
     private route: ActivatedRoute,
     private housingService: HousingService,
@@ -88,13 +90,20 @@ export class ViewPropertyDetailsComponent implements OnInit, AfterViewInit {
 
     this.authorIdForRelated = this.articles.find((a)=> a.id == this.articleId);
     
-    this.relatedArticles = this.articles.filter((i)=> i.name.toLowerCase().includes(this.authorIdForRelated.name) || i.authorId === this.authorIdForRelated.authorId);
+    this.relatedArticles = this.articles.filter((i) => (i.name.toLowerCase().includes(this.authorIdForRelated.name) || i.authorId === this.authorIdForRelated.authorId) && i.id != this.articleId);
+
 
   }
 
   // Toggle reply form visibility
   toggleReplyForm(commentId: number) {
     this.showReplyForm[commentId] = !this.showReplyForm[commentId];
+    //this.showReplyReplyForm[commentId] = false;
+  }
+
+  toggleReplyReplyForm(replyId: number) {
+    this.showReplyReplyForm[replyId] = !this.showReplyReplyForm[replyId];
+    //this.showReplyForm[commentId] = false;
   }
 
 
@@ -104,7 +113,7 @@ export class ViewPropertyDetailsComponent implements OnInit, AfterViewInit {
     if (this.commentText[articleId]?.trim()) {
 
       const newComment: Comment = {
-        comment_id: this.article.comments.length + 1,
+        comment_id: new Date().getTime(),
         user_id: this.currentUserId,
         username: this.currentUserName,
         text: this.commentText[articleId],
@@ -132,8 +141,43 @@ export class ViewPropertyDetailsComponent implements OnInit, AfterViewInit {
 
   }
 
+  //delete comment
+  deleteComment(articleId: number, commentId: number, commentUserId: number | null) {
+    const article = this.articles.find((a) => a.id === articleId);
+    if (article && commentUserId==this.currentUserId) {
+      article.comments = article.comments.filter((comment: { comment_id: number; }) => comment.comment_id !== commentId);
+
+      this.saveArticles();
+
+    }
+    else {
+      alert('You can only delete your own comment');
+    }
+    
+
+
+  }
+
+  deleteReply(articleId: number, commentId: number, replyId: number, replyUserId: number | null) {
+    const article = this.articles.find((a) => a.id === articleId);
+    const comment = article.comments.find((c: { comment_id: number; }) => c.comment_id === commentId);
+    if (article && replyUserId == this.currentUserId) {
+      comment.replies = comment.replies.filter((reply: { reply_id: number; }) => reply.reply_id != replyId);
+      
+
+      this.saveArticles();
+
+    }
+    else
+    {
+      alert('You can only delete your own reply');
+    }
+    
+
+  }
+
   //add reply
-  addReply(articleId: number, commentId: number) {
+  addReply(articleId: number, commentId: number, commentUser: string | null) {
 
     if(this.replyText[commentId]?.trim()) {
       const newReply: Reply = {
